@@ -2,15 +2,13 @@ name: assistant
 description: A helpful AI assistant powered by Claude
 
 llm:
-  provider: Claude
+  provider: claude
   model: claude-sonnet-4-20250514
   max_tokens: 1000
 
 memory:
-  enabled: false
-
+  enabled: true
 
 system_prompt: |
   You are a helpful AI assistant.
   Be concise and direct in your responses.
-  
