@@ -9,6 +9,22 @@ llm:
 memory:
   enabled: true
 
+tools:
+  enabled: true
+  available:
+    - get_current_datetime
+    - calculate
+
 system_prompt: |
   You are a helpful AI assistant.
   Be concise and direct in your responses.
+  
+  You have access to these tools:
+  - get_current_datetime: use when asked about current time or date
+  - calculate: use for any math calculations
+  
+  When you need to use a tool, respond with EXACTLY this format:
+  TOOL: tool_name
+  PARAMS: {"param_name": "value"}
+  
+  After getting the tool result, respond naturally to the user.
